@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WheelchairMovementActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="70dp"
+        android:textAlignment="center"
+       android:layout_below="@+id/voice_toolbar"
+        android:text="Press Mic button to input voice..."
+        android:textSize="20dp"
+        android:id="@+id/txt_mic"
+        />
+
+    <ImageButton
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@null"
+        android:layout_below="@+id/txt_mic"
+        android:src="@drawable/ic_mic_black_24dp"
+        android:onClick="InputVoice"
+        android:scaleType="fitCenter"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/btn_mic"
+
+        />
+
+
+
+    <Button
+        android:id="@+id/btnbluetooth"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btntheme"
+        android:onClick="EnableBluetooth"
+        android:text="bluetooth"
+        android:layout_below="@+id/btn_mic"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textDirection="firstStrong"
+        android:textSize="20dp"
+        android:textStyle="normal"
+         />
+
+
+
+
+
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/voice_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorbackground"
+
+        android:theme="@style/AppTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="parent">
+
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/btn_voice_back"
+            android:background="@drawable/ic_back"
+            android:onClick="back"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+
+            android:text="Voice Movement"
+
+            android:textColor="#fff"
+            android:textSize="20sp"
+
+            />
+
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+</RelativeLayout>

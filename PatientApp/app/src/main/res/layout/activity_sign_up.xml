@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/logopics"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/createtxt"
+        android:text="Create an account"
+        android:textSize="23dp"
+        android:textColor="#003B49"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/logopics"
+        android:layout_marginTop="5dp"/>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/person"
+        android:src="@drawable/ic_person_black_24dp"
+        android:layout_below="@+id/createtxt"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"/>
+
+    <EditText
+        android:id="@+id/nametxt"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/createtxt"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/person"
+        android:background="@drawable/txtdesign"
+        android:hint="Full Name"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="#003B49" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/uer"
+        android:src="@drawable/ic_person_outline_black_24dp"
+        android:layout_below="@id/person"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/unametxt"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/nametxt"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="21dp"
+        android:layout_toRightOf="@+id/uer"
+        android:background="@drawable/txtdesign"
+        android:hint="Username"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textColor="#003B49" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/contact"
+        android:src="@drawable/ic_phone_black_24dp"
+        android:layout_below="@id/person"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="80dp"/>
+
+    <EditText
+        android:id="@+id/contacttxt"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/unametxt"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/contact"
+        android:background="@drawable/txtdesign"
+        android:hint="Contact"
+        android:inputType="number"
+        android:padding="10dp"
+        android:textColor="#003B49" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/caretaker"
+        android:src="@drawable/doctor"
+        android:layout_below="@+id/contact"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <Spinner
+        android:id="@+id/doctxt"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/contacttxt"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_toRightOf="@+id/contact"
+        android:padding="10dp"
+        android:textColor="#003B49" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/passwordpics"
+        android:src="@drawable/ic_lock_open_black_24dp"
+        android:layout_below="@+id/caretaker"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:passwordToggleEnabled="true"
+        android:layout_below="@+id/doctxt"
+        android:layout_toRightOf="@+id/passwordpics"
+        >
+
+
+        <EditText
+            android:id="@+id/passtxt"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/doctxt"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="23dp"
+            android:hint="Password"
+            android:layout_toRightOf="@+id/passwordpics"
+            android:background="@drawable/txtdesign"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="#003B49" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/confpasswordpics"
+        android:src="@drawable/ic_lock_open_black_24dp"
+        android:layout_below="@+id/passwordpics"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/confpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:passwordToggleEnabled="true"
+        android:layout_below="@+id/pass"
+        android:layout_toRightOf="@+id/confpasswordpics"
+        >
+
+
+        <EditText
+            android:id="@+id/confpasstxt"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/pass"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="23dp"
+            android:hint="Password"
+            android:layout_toRightOf="@+id/confpasswordpics"
+            android:background="@drawable/txtdesign"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="#003B49" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/btntheme"
+        android:text="SIGN uP"
+        android:textStyle="normal"
+        android:textAlignment="center"
+        android:onClick="signUp"
+        android:textDirection="firstStrong"
+        android:layout_below="@id/confpass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        />
+
+</RelativeLayout>

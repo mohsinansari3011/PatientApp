@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TemperatureActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/temp_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorbackground"
+
+        android:theme="@style/AppTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="parent">
+
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/btn_temp_back"
+            android:background="@drawable/ic_back"
+            android:onClick="back"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+
+            android:text="Temperature"
+
+            android:textColor="#fff"
+            android:textSize="20sp"
+
+            />
+
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/pname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Patient Name: "
+        android:layout_below="@id/temp_toolbar"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="19dp"
+        android:textAlignment="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Patient"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/temp_toolbar"
+        android:layout_toRightOf="@+id/pname"
+        android:textSize="19dp"
+        android:textAlignment="center"
+        android:id="@+id/patientname"
+
+        android:layout_centerVertical="true"
+        />
+    <TextView
+        android:id="@+id/cname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Caretaker Name: "
+        android:layout_below="@id/pname"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="19dp"
+        android:textAlignment="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Caretaker"
+        android:layout_toRightOf="@+id/cname"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/patientname"
+        android:textSize="19dp"
+        android:textAlignment="center"
+        android:id="@+id/caretaker"
+        android:layout_centerVertical="true"
+
+        />
+
+    <TextView
+        android:id="@+id/_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date: "
+        android:layout_below="@id/cname"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="19dp"
+        android:textAlignment="center"/>
+    <TextView
+        android:id="@+id/text_view_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/caretaker"
+        android:text="Date"
+        android:textSize="19dp"
+        android:layout_toRightOf="@+id/_date"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"
+        />
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/text_view_date"
+        android:layout_marginTop="30dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
+
+
+</RelativeLayout>

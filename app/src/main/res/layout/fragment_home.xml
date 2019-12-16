@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:id="@+id/chat_layout"
+        android:layout_marginTop="90dp"
+        android:layout_width="182dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="15dp"
+        android:onClick="ManageChat"
+        android:background="@drawable/themeforhome">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/chat_Icon"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/ic_chat_black_24dp"
+            android:layout_centerInParent="true"
+            />
+
+        <TextView
+            android:id="@+id/chattext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chat_Icon"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="11dp"
+            android:text="Chat"
+            android:textColor="#ffffff"
+            android:textSize="24dp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/voice_layout"
+        android:layout_width="182dp"
+        android:layout_height="150dp"
+        android:onClick="ManageWheelchair"
+        android:background="@drawable/themeforhome"
+        android:layout_toRightOf="@+id/chat_layout"
+        android:layout_marginTop="90dp"
+        android:layout_marginLeft="15dp">
+
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/mic_Icon"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/ic_keyboard_voice_black_24dp"
+            android:layout_centerInParent="true"
+
+            />
+
+
+        <TextView
+            android:id="@+id/mictext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mic_Icon"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="11dp"
+            android:text="Voice Movement"
+            android:textColor="#ffffff"
+            android:textSize="24dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/pulse_layout"
+        android:layout_below="@id/chat_layout"
+        android:layout_marginTop="10dp"
+        android:layout_width="182dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="15dp"
+        android:onClick="ManagePulse"
+        android:background="@drawable/themeforhome">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/pulse_Icon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/pulserate"
+            android:layout_centerInParent="true"
+            />
+
+        <TextView
+            android:id="@+id/pulsetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pulse_Icon"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dp"
+            android:text="Pulse Rate"
+            android:textColor="#ffffff"
+            android:textSize="24dp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/temp_layout"
+        android:layout_below="@+id/voice_layout"
+        android:layout_width="182dp"
+        android:layout_height="150dp"
+        android:onClick="ManageTemperature"
+        android:background="@drawable/themeforhome"
+        android:layout_toRightOf="@+id/chat_layout"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/temp_Icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/temp"
+            android:layout_centerInParent="true"
+            />
+
+        <TextView
+            android:id="@+id/temptext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/temp_Icon"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="13dp"
+            android:text="Temperature"
+            android:textColor="#ffffff"
+            android:textSize="24dp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/heartbeat_layout"
+        android:layout_below="@id/pulse_layout"
+        android:layout_marginTop="10dp"
+        android:layout_width="182dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="15dp"
+        android:onClick="ManagePulse"
+        android:background="@drawable/themeforhome">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/heart_Icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/heart"
+            android:layout_centerInParent="true"
+            />
+
+        <TextView
+            android:id="@+id/hearttext"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/heart_Icon"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="14dp"
+            android:text="Heart Beat"
+            android:textColor="#ffffff"
+            android:textSize="24dp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/dist_layout"
+        android:layout_below="@+id/pulse_layout"
+        android:layout_width="182dp"
+        android:layout_height="150dp"
+        android:onClick="ManageDistance"
+        android:background="@drawable/themeforhome"
+        android:layout_toRightOf="@+id/chat_layout"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/dist_Icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_location"
+            android:layout_centerInParent="true"
+            />
+
+        <TextView
+            android:id="@+id/disttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dist_Icon"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="17dp"
+            android:text="Distance"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffff"
+            android:textSize="24dp" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

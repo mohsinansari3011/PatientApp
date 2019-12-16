@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PulseRateActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/pulse_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorbackground"
+
+        android:theme="@style/AppTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="parent">
+
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/btn_pulse_back"
+            android:background="@drawable/ic_back"
+            android:onClick="back"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+
+            android:text="Pulse Rate/ Heartbeat"
+
+            android:textColor="#fff"
+            android:textSize="20sp"
+
+            />
+
+
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <Button
+        android:id="@+id/forward_btn"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/pulse_toolbar"
+        android:background="@drawable/btntheme"
+
+        android:text="forward"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textDirection="firstStrong"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        />
+
+    <Button
+        android:id="@+id/reverse_btn"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/forward_btn"
+        android:background="@drawable/btntheme"
+
+
+        android:text="back"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textDirection="firstStrong"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        />
+    <Button
+        android:id="@+id/forward_right_btn"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/reverse_btn"
+        android:background="@drawable/btntheme"
+
+        android:text="right"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textDirection="firstStrong"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        />
+    <Button
+        android:id="@+id/forward_left_btn"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/forward_right_btn"
+        android:background="@drawable/btntheme"
+
+        android:text="left"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textDirection="firstStrong"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        />
+    <Button
+        android:id="@+id/bt_connect"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/forward_left_btn"
+        android:background="@drawable/btntheme"
+        android:onClick="bluetooth"
+        android:text="connect"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textDirection="firstStrong"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        />
+
+</RelativeLayout>
